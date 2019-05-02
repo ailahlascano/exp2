@@ -1,0 +1,37 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main()
+{
+    string package;
+    float hours, bill = 0.0;
+    
+    cout << "Internet subscription packages:\n";
+    cout << "1. Package A: P995/mo 10 hrs of access are provided. Additional hours are P20/hr.\n";
+    cout << "2. Package B: For P1495/mo 20 hrs of access are provided. Additional hours are P10/hr.\n";
+    cout << "3. Package C: For P1995/mo of unlimited access is provided.\n\n";
+    
+    cout << "Enter package purchased (1-3): ";
+    cin >> package;
+    
+    cout << "Enter hours used: ";
+    cin >> hours;
+    
+    if (package == "1" && hours > 10)
+        bill = 995 + ((hours - 10) * 20);
+    else if (package == "1" && hours <= 10)
+        bill = 995;
+    else if (package == "2" && hours > 20)
+        bill = 1495 + ((hours - 20) * 10);
+    else if (package == "2" && hours <= 20)
+        bill = 1495;
+    else if (package == "3" && hours > 0)
+        bill = 1995;
+    else
+        cout << "Cannot calculate monthly due. Please double check the information you have given.";
+    
+    cout << "Monthly due: P" << bill;
+    
+    return 0;
+}
