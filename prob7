@@ -1,0 +1,26 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    int sum, counter, num;
+    
+    cout << "Enter a number: ";
+    cin >> num;
+    
+    while (num > 0)
+    {
+        for (sum = 0, counter = 1; counter <= num; counter++)
+            sum+=counter;
+        
+        cout << "The sum of 1 to " << num << " is: " << sum << ' ' << endl;
+        cout << "Please enter a number: ";
+        cin >> num;
+    }
+    
+    cout << ' ' << endl;
+    cout << "Thank You!";
+    
+    return 0;
+}
