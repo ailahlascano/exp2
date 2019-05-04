@@ -1,0 +1,32 @@
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    int n1, n2, nX, terms;
+    cout << "Fibonacci numbers:\n";
+    
+    n1 = 0;
+    n2 = 1;
+    
+    cout << n1 << ", " << n2 << ", ";
+    
+    terms = 1;
+    
+    while(terms <= 20)
+    {
+        nX = n1 + n2;
+        n1 = n2;
+        n2 = nX;
+    
+        cout << nX;
+    
+        if (terms < 20)
+        {
+            cout << ", ";
+        }
+    
+        terms++;
+    }
+    return 0;
+}
