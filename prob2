@@ -1,0 +1,26 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    int RecentMeter, PrevMeter;
+    double unpaid, tentativeBill, finalBill;
+    
+    cout << "Previous gallon used: ";
+    cin >> PrevMeter;
+    cout << "Current gallon used: ";
+    cin >> RecentMeter;
+    cout << "Unpaid balance: ";
+    cin >> unpaid;
+    
+    tentativeBill = ((RecentMeter - PrevMeter)*1.10) + 35;
+    finalBill = tentativeBill;
+    
+    if (unpaid > 0)
+        finalBill = tentativeBill + 20;
+    
+    cout << "Total bill= P" << finalBill;
+    
+    return 0;
+}
