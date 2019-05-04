@@ -1,0 +1,39 @@
+#include <iostream>
+#include <iomanip>
+#include <cmath>
+
+using namespace std;
+
+int main()
+{
+    int x, y;
+    const float z = 2.5;
+    
+    cout << "x: ";
+    cin >> x;
+    cout << "y: ";
+    cin >> y;
+    
+    switch (x)
+    {
+        case 1:
+            if (x == 1 && y > 1 && y < 5)
+                cout << "V= " << setprecision(2) << setw(10) << x * y * z;
+            else if (x == 1 && y >= 5)
+                cout << "V= " << setprecision(2) << setw(10) << x + (x + (y / z));
+            
+        case 2:
+            if (x == 2 && y <= 5)
+                cout << "V= " << setprecision(2) << setw(10) << abs((x - y) / z);
+            else if (x == 2 && y > 5)
+                cout << "V= " << setprecision(2) << setw(10) << ((x) - (sqrt(y+z)));
+            break;
+            
+        case 3:
+            if (x > 2 && y <= 0)
+                cout << "V= " << setprecision(2) << setw(10) << x + y + z;
+            break;
+    }
+
+    return 0;
+}
